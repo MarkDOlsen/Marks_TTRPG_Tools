@@ -368,7 +368,7 @@
     <script>
         const ladder = ["+8 Legendary", "+7 Epic", "+6 Fantastic", "+5 Superb", "+4 Great", "+3 Good", "+2 Fair", "+1 Average", "+0 Mediocre", "-1 Poor", "-2 Terrible"];
         const approaches = ["Careful", "Clever", "Flashy", "Forceful", "Quick", "Sneaky"];
-        const scaleRanks = ["Average", "Superior", "Paragon", "5th Rank", "4th Rank", "3rd Rank", "2nd Rank", "1st Rank"];
+        const scaleRanks = ["1st Rank", "2nd Rank", "3rd Rank", "4th Rank", "5th Rank", "Paragon", "Superior", "Average"];
         const scales = ["Psyche", "Strength", "Endurance", "Warfare"];
 
         // Init Approaches
@@ -390,7 +390,7 @@
             div.className = "flex justify-between items-center gap-4";
             div.innerHTML = `<span class="text-xs font-semibold">${s}</span>
                 <select id="${s.toLowerCase()}" class="w-32 text-[10px] font-bold border-b border-slate-300 text-indigo-700 text-right">
-                    ${scaleRanks.map(val => `<option value="${val}" ${val === "Mundane" ? "selected" : ""}>${val}</option>`).join('')}
+                    ${scaleRanks.map(val => `<option value="${val}" ${val === "Paragon" ? "selected" : ""}>${val}</option>`).join('')}
                 </select>`;
             scaleContainer.appendChild(div);
         });
